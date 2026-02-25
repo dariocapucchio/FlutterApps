@@ -34,9 +34,25 @@ class _LoadingState extends State<Loading> {
   }
 
   void getTime() async {
-    Response response = await get(Uri.https('time.now','/iana-time-zone/america-argentina-buenos-aires/'));
+    //Response response = await get(Uri.https('time.now','/developer/api/timezone/America/Argentina/BuenosAires/'));
     //Map timeData = jsonDecode(response.toString());
-    print(response.body);
+    Response response = await get(
+      Uri.parse('https://time.now/developer/api/timezone/Asia/Dubai')
+    );
+    Map data = jsonDecode(response.body);
+    //print(data);
+
+    // get properties from data
+    String datetime = data['utc_datetime'];
+    String offset = data['utc_offset'].substring(1,3);
+
+    print(datetime);
+    //print(offset);
+
+    // create a DateTime object
+    DateTime now = DateTime.parse(datetime);
+    now = now.add(Duration(hours: int.parse(offset)));
+    print(now);
   }
 
   @override
