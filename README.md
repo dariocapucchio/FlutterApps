@@ -6,7 +6,9 @@ Esto es una recopilacion de aplicaciones de prueba que voy haciendo a medida que
 
 ## Info util
 
-[Flutter Documentation](https://docs.flutter.dev/)
+- [Flutter Documentation](https://docs.flutter.dev/)
+- [Flutter Packages](https://pub.dev/packages?q=sdk%3Aflutter)
+- [Como ser un Ninja en Flutter :ninja:](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ)
 
 ---
 
@@ -18,6 +20,6 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
-2026-02-24 - flutter_app_04_multipage
-: Tomando la hora de worldtimeapi
+- 2026-02-24 - flutter_app_04_multipage
+	Tomando la hora de worldtimeapi
 
