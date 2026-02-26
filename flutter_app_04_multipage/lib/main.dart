@@ -4,7 +4,7 @@ import 'package:flutter_app_04_multipage/pages/loading.dart';
 import 'package:flutter_app_04_multipage/pages/home.dart';
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/home',
+  initialRoute: '/',
   routes: {
     '/': (contex) => Loading(),
     '/home': (contex) => Home(),

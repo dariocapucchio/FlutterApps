@@ -21,5 +21,7 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 ## LOG
 
 - 2026-02-24 - flutter_app_04_multipage
-	Tomando la hora de worldtimeapi
+	: Tomando la hora de worldtimeapi
+- 2026-02-25 - flutter_app_04_multipage
+	: Nueva clase WorlTime, muestra la hora en la pantalla loading
 
