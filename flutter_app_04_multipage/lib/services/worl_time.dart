@@ -12,20 +12,27 @@ class WorlTime {
 
   Future<void> getTime() async {
     
-    Response response = await get(
-      Uri.parse('https://time.now/developer/api/timezone/$url')
-    );
-    Map data = jsonDecode(response.body);
+    try {
+      Response response = await get(
+        Uri.parse('https://time.now/developer/api/timezone/$url')
+      );
+      Map data = jsonDecode(response.body);
 
-    // get properties from data
-    String datetime = data['utc_datetime'];
-    String offset = data['utc_offset'].substring(1,3);
+      // get properties from data
+      String datetime = data['utc_datetime'];
+      String offset = data['utc_offset'].substring(1,3);
 
-    // create a DateTime object
-    DateTime now = DateTime.parse(datetime);
-    now = now.add(Duration(hours: int.parse(offset)));
+      // create a DateTime object
+      DateTime now = DateTime.parse(datetime);
+      now = now.add(Duration(hours: int.parse(offset)));
     
-    time = now.toString();
+      time = now.toString();
+    } 
+    catch (e) {
+      print('Error: $e');
+      time = 'no data';
+    }
+    
   }
 
 }
