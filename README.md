@@ -20,8 +20,8 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## To Do
 
--[] Probar las apps en android y en iOS.
--[] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
+- [] Probar las apps en android y en iOS.
+- [] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
 
 ---
 
@@ -32,8 +32,8 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 2026-03-02 - flutter_app_04_multipage
 : Varias cosas
-	---* Manejo de errores. try {} catch {}. Cunado no se obtiene la hora del servidor imprime 'no data'
-	---* Pasando los datos a la pantalla /home, pero me tira error en la funcion __data = ModalRoute.of(context).settings.arguments;__ del archivo __home.dart__ :( . Ya es tarde y me voy a dormir :sleeping:.
+ - Manejo de errores. try {} catch {}. Cunado no se obtiene la hora del servidor imprime 'no data'
+ - Pasando los datos a la pantalla /home, pero me tira error en la funcion __data = ModalRoute.of(context).settings.arguments;__ del archivo __home.dart__ :( . Ya es tarde y me voy a dormir :sleeping:.
 
 2026-02-25 - flutter_app_04_multipage
 : Nueva clase WorlTime, muestra la hora en la pantalla loading
