@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
     print(map_data);
 
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),

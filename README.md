@@ -27,6 +27,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-03-07 - flutter_app_04_multipage
+: Agregue la animacion en la pantalla loading. No se rompio :)
+
 2026-03-05 - flutter_app_04_multipage
 : Rehaciendo lo que funciono antes del incidente :sweat_smile:. Se resolvio el error de la funcion que pasa datos entre pantallas usando una variable tipo __Object?__. En la pantalla loading se obtiene la hora actual y se la pasa a la pantalla home en esta variable Object?, en la pantalla home se castea a una variable tipo Map. Subo hasta aca porque esto seguro funciona (por ahora).
 
