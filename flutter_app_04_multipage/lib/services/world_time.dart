@@ -2,14 +2,15 @@ import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
 
-class WorlTime {
+class WorldTime {
 
   String location;    // La ubicacion que se muestra en la UI
   String flag;        // url del icono de la bandera
   String url;         // url para la hora
   String time;        // La hora en esa ubicacion
+  bool isDaytime;     // Verdadero o falso si es de dia o de noche
 
-  WorlTime({ this.location = 'loading', this.flag = 'loading', this.url = 'loading', this.time = 'loading' });
+  WorldTime({ this.location = 'loading', this.flag = 'loading', this.url = 'loading', this.time = 'loading', this.isDaytime = true });
 
   Future<void> getTime() async {
     
@@ -28,6 +29,7 @@ class WorlTime {
       now = now.add(Duration(hours: int.parse(offset)));
     
       //time = now.toString();
+      isDaytime = now.hour > 6 && now.hour < 20 ? true : false;
       time = DateFormat.jm().format(now);
     } 
     catch (e) {

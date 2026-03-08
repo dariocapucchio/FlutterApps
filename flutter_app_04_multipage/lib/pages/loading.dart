@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_04_multipage/services/worl_time.dart';
+import 'package:flutter_app_04_multipage/services/world_time.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
@@ -9,18 +9,20 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
 
-  String time = 'loading';
-  Object? datos = {};
+  //String time = 'loading';
+  //Object? datos = {};
+  Map data = {};
 
   void setUpWorldTime() async {
-    WorlTime instance = WorlTime(location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
+    WorldTime instance = WorldTime(location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
     await instance.getTime();
-    datos = {
+    data = {
       'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
+      'isDaytime': instance.isDaytime,
     };
-    Navigator.pushReplacementNamed(context, '/home', arguments: datos);
+    Navigator.pushReplacementNamed(context, '/home', arguments: data);
     /*
     // Codigo para probar que funciona
     print(instance.time);
