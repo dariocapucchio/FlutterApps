@@ -27,6 +27,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-03-12 - misviandas_app_v01
+: Arme una appnueva intentando recrear la imagen de referencia que hice con Steve. Esta muuuy verde todavia.
+
 2026-03-07 - flutter_app_04_multipage
 : Varias cosa
  - Agregue la animacion en la pantalla loading. No se rompio :)
