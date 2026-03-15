@@ -11,15 +11,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: const Text(
           'MisViandas',
-          style: TextStyle(color: Colors.black87),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.grey[250],
-        elevation: 0.0,
+        elevation: 10.0,
+        shadowColor: Colors.black,
       ),
       body: SafeArea(
         child: Padding(
@@ -81,8 +82,47 @@ class _HomeState extends State<Home> {
                   color: Colors.white,
                 ),
               ),
-              Container(
-                color: Colors.white,
+              SizedBox(height: 20.0),
+              FilledButton(
+                onPressed: () {},
+                child: Text('Boton 1'),
+              ),
+              SizedBox(height: 20.0),
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(20.0),
+                    color: Colors.amber,
+                    child: TextButton.icon(
+                      onPressed: () {}, 
+                      label: Text('data'),
+                      icon: Icon(
+                        Icons.home,
+                        size: 40.0,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20.0),
+                    color: Colors.green,
+                    child: TextButton.icon(
+                      onPressed: () {}, 
+                      label: Text('data'),
+                      icon: Icon(
+                        Icons.access_alarm,
+                        size: 40.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              OverflowBar(
+                alignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  TextButton( child: const Text('Button 1'), onPressed: () {}),
+                  TextButton( child: const Text('Button 2'), onPressed: () {}),
+                  TextButton( child: const Text('Button 3'), onPressed: () {}),
+                ],
               ),
             ],
           ),
