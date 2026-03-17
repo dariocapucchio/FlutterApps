@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -24,12 +26,15 @@ class _HomeState extends State<Home> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 120, 10, 0),
+          padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Card(
+                margin: EdgeInsets.all(10.0),
+                elevation: 10.0,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     'Organizá tus viandas de toda las semana en segundos!',
                     style: TextStyle(
@@ -39,42 +44,30 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
-              IconButton(
-                onPressed: () {}, 
-                icon: Icon(
-                  Icons.punch_clock,
-                ),
-                color: Colors.green,
-              ),
-              FilledButton.icon(
-                onPressed: () {}, 
-                label: Text(
-                  'Edit Loction',
-                  style: TextStyle(
-                    color: Colors.grey[300],
-                  ),
-                ),
-                icon: Icon(
-                  Icons.edit_location,
-                  color: Colors.grey[300],
+              //SizedBox(height: 20.0),
+              
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Generar plan de viandas'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blue),
                 ),
               ),
-              SizedBox(height: 20.0),
+              //SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
                 children: <Widget>[
-                  Text(
-                    'hola',
-                    style: TextStyle(
-                      fontSize: 28.0,
-                      letterSpacing: 2.0,
-                      color: Colors.white,
-                    ),
+                  Card(
+                    elevation: 10.0,
+                    child: Text('Ver recetas'),
+                  ),
+                  Card(
+                    elevation: 10.0,
+                    child: Text('Mi plan semanal'),
                   ),
                 ],
               ),
-              SizedBox(height: 20.0),
               Text(
                 'gato',
                 style: TextStyle(
@@ -82,23 +75,20 @@ class _HomeState extends State<Home> {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 20.0),
-              FilledButton(
-                onPressed: () {},
-                child: Text('Boton 1'),
-              ),
+              
               SizedBox(height: 20.0),
               Row(
                 children: [
                   Container(
                     padding: EdgeInsets.all(20.0),
-                    color: Colors.amber,
+                    color: Colors.blue[300],
                     child: TextButton.icon(
                       onPressed: () {}, 
                       label: Text('data'),
                       icon: Icon(
                         Icons.home,
                         size: 40.0,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -109,20 +99,54 @@ class _HomeState extends State<Home> {
                       onPressed: () {}, 
                       label: Text('data'),
                       icon: Icon(
-                        Icons.access_alarm,
+                        Icons.add,
                         size: 40.0,
+                        color: Colors.white,
                       ),
                     ),
                   ),
                 ],
               ),
-              OverflowBar(
-                alignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  TextButton( child: const Text('Button 1'), onPressed: () {}),
-                  TextButton( child: const Text('Button 2'), onPressed: () {}),
-                  TextButton( child: const Text('Button 3'), onPressed: () {}),
-                ],
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                color: Colors.white,
+                
+                child: OverflowBar(
+                  alignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('INICIO'),
+                      icon: Icon(
+                        Icons.home,
+                        size: 50.0,
+                        color: Colors.red,
+                      ),
+                    ),
+                    
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('PLAN SEMANAL'),
+                      icon: Icon(
+                        Icons.border_color,
+                        size: 50.0,
+                        color: Colors.green,
+                        
+                      ),
+                    ),
+                    
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: Text('LISTA'),
+                      icon: Icon(
+                        Icons.add_shopping_cart,
+                        size: 50.0,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    
+                  ],
+                ),
               ),
             ],
           ),

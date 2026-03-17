@@ -27,6 +27,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-03-16 - misviandas_app_v01
+: Tratando de que se parezca a lo que hizo la IA. De a poco.
+
 2026-03-12 - misviandas_app_v01
 : Arme una appnueva intentando recrear la imagen de referencia que hice con Steve. Esta muuuy verde todavia.
 
