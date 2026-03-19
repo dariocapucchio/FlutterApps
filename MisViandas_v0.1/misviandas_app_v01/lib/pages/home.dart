@@ -15,13 +15,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        leading: Icon(Icons.home),
+        toolbarHeight: 70.0,
         title: const Text(
           'MisViandas',
           style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
-        centerTitle: true,
+        centerTitle: false,
         backgroundColor: Colors.grey[250],
-        elevation: 10.0,
+        elevation: 5.0,
         shadowColor: Colors.black,
       ),
       body: SafeArea(
@@ -48,9 +50,15 @@ class _HomeState extends State<Home> {
               
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Generar plan de viandas'),
+                child: Text(
+                  'Generar plan de viandas',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                  ),
+                ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                  backgroundColor: MaterialStateProperty.all(Colors.green[400]),
                 ),
               ),
               //SizedBox(height: 20.0),
@@ -68,89 +76,51 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              Text(
-                'gato',
-                style: TextStyle(
-                  fontSize: 66.0,
-                  color: Colors.white,
-                ),
-              ),
-              
-              SizedBox(height: 20.0),
-              Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(20.0),
-                    color: Colors.blue[300],
-                    child: TextButton.icon(
-                      onPressed: () {}, 
-                      label: Text('data'),
-                      icon: Icon(
-                        Icons.home,
-                        size: 40.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(20.0),
-                    color: Colors.green,
-                    child: TextButton.icon(
-                      onPressed: () {}, 
-                      label: Text('data'),
-                      icon: Icon(
-                        Icons.add,
-                        size: 40.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                color: Colors.white,
-                
-                child: OverflowBar(
-                  alignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    TextButton.icon(
-                      onPressed: () {},
-                      label: Text('INICIO'),
-                      icon: Icon(
-                        Icons.home,
-                        size: 50.0,
-                        color: Colors.red,
-                      ),
-                    ),
-                    
-                    TextButton.icon(
-                      onPressed: () {},
-                      label: Text('PLAN SEMANAL'),
-                      icon: Icon(
-                        Icons.border_color,
-                        size: 50.0,
-                        color: Colors.green,
-                        
-                      ),
-                    ),
-                    
-                    TextButton.icon(
-                      onPressed: () {},
-                      label: Text('LISTA'),
-                      icon: Icon(
-                        Icons.add_shopping_cart,
-                        size: 50.0,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    
-                  ],
-                ),
-              ),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: <Widget>[
+          TextButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/usuario');
+            },
+            label: Text('USUARIO'),
+            icon: Icon(
+              Icons.person,
+              size: 50.0,
+              color: Colors.red,
+            ),
+          ),
+          
+          TextButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/plan');
+            },
+            label: Text('PLAN SEMANAL'),
+            icon: Icon(
+              Icons.border_color,
+              size: 50.0,
+              color: Colors.green,
+            ),
+          ),
+                    
+          TextButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/lista');
+            },
+            label: Text('LISTA'),
+            icon: Icon(
+              Icons.add_shopping_cart,
+              size: 50.0,
+              color: Colors.blue,
+            ),
+          ),            
+        ],
+        backgroundColor: Colors.grey[250],
+        elevation: 10.0,
+        shadowColor: Colors.black,
       ),
     );
   }

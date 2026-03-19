@@ -9,6 +9,7 @@ Esto es una recopilacion de aplicaciones de prueba que voy haciendo a medida que
 - [Flutter Documentation](https://docs.flutter.dev/)
 - [Flutter Packages](https://pub.dev/packages?q=sdk%3Aflutter)
 - [Como ser un Ninja en Flutter :ninja:](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ)
+- [Info veloz de Flutter](https://www.youtube.com/watch?v=WOvj84xq_fc)
 
 ---
 
@@ -20,8 +21,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## To Do
 
-- [] Probar las apps en android y en iOS.
-- [] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
+- [ ] Probar las apps en android y en iOS.
+- [ ] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
+- [ ] Analizar de donde se van a sacar las recetas.
 
 ---
 
