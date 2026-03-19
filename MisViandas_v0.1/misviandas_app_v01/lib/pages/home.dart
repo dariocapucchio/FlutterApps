@@ -82,45 +82,61 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: NavigationBar(
         destinations: <Widget>[
-          TextButton.icon(
-            onPressed: () {
-              Navigator.pushNamed(context, '/usuario');
-            },
-            label: Text('USUARIO'),
-            icon: Icon(
-              Icons.person,
-              size: 50.0,
-              color: Colors.red,
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/usuario');
+                },
+                icon: Icon(
+                  Icons.person,
+                  size: 50.0,
+                  color: Colors.red,
+                ),
+              ),
+              Text('USUARIO'),
+            ],
           ),
           
-          TextButton.icon(
-            onPressed: () {
-              Navigator.pushNamed(context, '/plan');
-            },
-            label: Text('PLAN SEMANAL'),
-            icon: Icon(
-              Icons.border_color,
-              size: 50.0,
-              color: Colors.green,
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/plan');
+                },
+                icon: Icon(
+                  Icons.border_color,
+                  size: 50.0,
+                  color: Colors.green,
+                ),
+              ),
+              Text('PLAN SEMANAL'),
+            ],
           ),
-                    
-          TextButton.icon(
-            onPressed: () {
-              Navigator.pushNamed(context, '/lista');
-            },
-            label: Text('LISTA'),
-            icon: Icon(
-              Icons.add_shopping_cart,
-              size: 50.0,
-              color: Colors.blue,
-            ),
-          ),            
+
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/lista');
+                },
+                icon: Icon(
+                  Icons.add_shopping_cart,
+                  size: 50.0,
+                  color: Colors.blue,
+                ),
+              ),
+              Text('LISTA'),
+            ],
+          ),          
         ],
         backgroundColor: Colors.grey[250],
         elevation: 10.0,
         shadowColor: Colors.black,
+        height: 100.0,
       ),
     );
   }
