@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.green[100],
       appBar: AppBar(
         leading: Image(
           image: AssetImage('assets/logo_01_nbg.png'),
@@ -22,18 +22,22 @@ class _HomeState extends State<Home> {
         toolbarHeight: 70.0,
         title: const Text(
           'MisViandas',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 35),
         ),
         centerTitle: false,
         backgroundColor: Colors.grey[250],
         elevation: 5.0,
         shadowColor: Colors.black,
       ),
+      
+      
+      
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Card(
                 margin: EdgeInsets.all(10.0),
@@ -49,7 +53,8 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              //SizedBox(height: 20.0),
+              
+              SizedBox(height: 20.0),
               
               ElevatedButton(
                 onPressed: () {},
@@ -64,7 +69,94 @@ class _HomeState extends State<Home> {
                   backgroundColor: MaterialStateProperty.all(Colors.green[400]),
                 ),
               ),
-              //SizedBox(height: 20.0),
+              
+              SizedBox(height: 20.0),
+              
+              Card(
+                elevation: 10.0,
+                color: Colors.white,
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/usuario');
+                  },
+                  label: Text(
+                    'Perfiles',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
+                  ),
+                  icon: Image(
+                    image: AssetImage('assets/icono_recetas_00.png'),
+                    height: 100.0,
+                  ),
+                ),
+              ),
+              
+              SizedBox(height: 20.0),
+
+              Card(
+                elevation: 10.0,
+                color: Colors.white,
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/plan');
+                  },
+                  label: Text(
+                    'Plan semanal',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
+                  ),
+                  icon: Image(
+                    image: AssetImage('assets/icono_plan.png'),
+                    height: 100.0,
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20.0),
+
+              Card(
+                elevation: 10.0,
+                color: Colors.white,
+                child: TextButton.icon(
+                  onPressed: () {},
+                  label: Text(
+                    'Ver recetas',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
+                  ),
+                  icon: Image(
+                    image: AssetImage('assets/icono_recetas_01.png'),
+                    height: 100.0,
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20.0),
+
+              Card(
+                elevation: 10.0,
+                color: Colors.white,
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/lista');
+                  },
+                  label: Text(
+                    'Lista de compras',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
+                  ),
+                  icon: Image(
+                    image: AssetImage('assets/icono_changuito.png'),
+                    height: 100.0,
+                  ),
+                ),
+              ),
+
+              /*  // Grilla de botones primera opcion
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 // ignore: prefer_const_literals_to_create_immutables
@@ -116,22 +208,31 @@ class _HomeState extends State<Home> {
                     elevation: 10.0,
                     child: Column(
                       children: [
-                        Image(
-                          image: AssetImage('assets/icono_changuito.png'),
-                          height: 150.0,
+                        IconButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/lista'); 
+                          },
+                          icon: Image(
+                            image: AssetImage('assets/icono_changuito.png'),
+                            height: 150,
+                          ),
                         ),
+                        
                         Text('Lista de compras'),
                       ],
                     ),
                   ),
                 ],
               ),
-
+              */
 
             ],
           ),
         ),
       ),
+
+
+/*    //  Barra de navegacion (no me gusto)
       bottomNavigationBar: NavigationBar(
         destinations: <Widget>[
           Column(
@@ -147,7 +248,7 @@ class _HomeState extends State<Home> {
                   color: Colors.red,
                 ),
               ),
-              Text('USUARIO'),
+              Text('PERFILES'),
             ],
           ),
           
@@ -190,6 +291,7 @@ class _HomeState extends State<Home> {
         shadowColor: Colors.black,
         height: 100.0,
       ),
+    */
     );
   }
 }

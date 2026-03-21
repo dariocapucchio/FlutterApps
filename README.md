@@ -29,6 +29,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-03-21 - misviandas_app_v01
+: Agregue las imagenes a la app.
+
 2026-03-19 - misviandas_app_v01
 : Agregue la NavigationBar que es la barra que esta en la parte inferior de la pantalla, con los iconos para cabiar de pantalla. Tambien arme las otras pantallas para ver que la navegacion funcione bien. Las pantallas solo tienen un color distitivo y nada mas.
 
