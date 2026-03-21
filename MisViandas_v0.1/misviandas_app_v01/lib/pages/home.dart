@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        leading: Icon(Icons.home),
+        leading: Image(
+          image: AssetImage('assets/logo_01_nbg.png'),
+          height: 60.0,
+        ),
         toolbarHeight: 70.0,
         title: const Text(
           'MisViandas',
@@ -63,19 +66,68 @@ class _HomeState extends State<Home> {
               ),
               //SizedBox(height: 20.0),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: <Widget>[
                   Card(
                     elevation: 10.0,
-                    child: Text('Ver recetas'),
+                    child: Column(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/icono_recetas_00.png'),
+                          height: 150.0,
+                        ),
+                        Text('Ver recetas'),
+                      ],
+                    ),
                   ),
                   Card(
                     elevation: 10.0,
-                    child: Text('Mi plan semanal'),
+                    child: Column(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/icono_plan.png'),
+                          height: 150.0,
+                        ),
+                        Text('Mi plan semanal'),
+                      ],
+                    ),
                   ),
                 ],
               ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: <Widget>[
+                  Card(
+                    elevation: 10.0,
+                    child: Column(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/icono_recetas_01.png'),
+                          height: 150.0,
+                        ),
+                        Text('Mis recetas'),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    elevation: 10.0,
+                    child: Column(
+                      children: [
+                        Image(
+                          image: AssetImage('assets/icono_changuito.png'),
+                          height: 150.0,
+                        ),
+                        Text('Lista de compras'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
+
             ],
           ),
         ),
