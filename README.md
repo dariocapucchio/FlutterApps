@@ -29,6 +29,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-03-29  - misviandas_app_v01
+: Actulice la app. Varias modificaciones, pero me da fiaca listarlas a todas ahora aca :(
+
 2026-03-21 - misviandas_app_v01
 : Agregue las imagenes a la app.
 

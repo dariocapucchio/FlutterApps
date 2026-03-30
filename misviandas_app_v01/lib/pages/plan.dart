@@ -15,11 +15,19 @@ class _PlanState extends State<Plan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[400],
+      backgroundColor: Colors.green[100],
       appBar: AppBar(
-        title: Text('Plan Semanal'),
+        title: Text(
+          'Plan semanal',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 35),
+        ),
         centerTitle: true,
-
+        toolbarHeight: 70.0,
+        backgroundColor: Colors.green[600],
+        elevation: 5.0,
+        leading: BackButton(
+          color: Colors.white,
+        ),
       ),
       body: Center(
         child: 

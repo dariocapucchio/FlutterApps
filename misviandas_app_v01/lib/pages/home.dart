@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -18,14 +21,21 @@ class _HomeState extends State<Home> {
         leading: Image(
           image: AssetImage('assets/logo_01_nbg.png'),
           height: 60.0,
+          color: Colors.white,
         ),
+        actions: [
+          CloseButton(
+            onPressed: () {exit(0);},
+            color: Colors.white,
+          )
+        ],
         toolbarHeight: 70.0,
         title: const Text(
           'MisViandas',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 35),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 35),
         ),
         centerTitle: false,
-        backgroundColor: Colors.grey[250],
+        backgroundColor: Colors.green[600],
         elevation: 5.0,
         shadowColor: Colors.black,
       ),
@@ -35,10 +45,12 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: ListView(
+            //mainAxisAlignment: MainAxisAlignment.start,
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              
+            /*  
               Card(
                 margin: EdgeInsets.all(10.0),
                 elevation: 10.0,
@@ -47,16 +59,15 @@ class _HomeState extends State<Home> {
                   child: Text(
                     'Organizá tus viandas de toda las semana en segundos!',
                     style: TextStyle(
-                      fontSize: 28.0,
+                      fontSize: 20.0,
                       letterSpacing: 2.0,
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 20.0),  */
               
-              SizedBox(height: 20.0),
-              
-              ElevatedButton(
+ /*             ElevatedButton(
                 onPressed: () {},
                 child: Text(
                   'Generar plan de viandas',
@@ -69,8 +80,8 @@ class _HomeState extends State<Home> {
                   backgroundColor: MaterialStateProperty.all(Colors.green[400]),
                 ),
               ),
-              
-              SizedBox(height: 20.0),
+*/              
+              //SizedBox(height: 20.0),
               
               Card(
                 elevation: 10.0,
@@ -82,17 +93,17 @@ class _HomeState extends State<Home> {
                   label: Text(
                     'Perfiles',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 25.0,
                     ),
                   ),
                   icon: Image(
                     image: AssetImage('assets/icono_recetas_00.png'),
-                    height: 100.0,
+                    height: 60.0,
                   ),
                 ),
               ),
               
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
 
               Card(
                 elevation: 10.0,
@@ -104,37 +115,39 @@ class _HomeState extends State<Home> {
                   label: Text(
                     'Plan semanal',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 25.0,
                     ),
                   ),
                   icon: Image(
                     image: AssetImage('assets/icono_plan.png'),
-                    height: 100.0,
+                    height: 60.0,
                   ),
                 ),
               ),
 
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
 
               Card(
                 elevation: 10.0,
                 color: Colors.white,
                 child: TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/recetas');
+                  },
                   label: Text(
                     'Ver recetas',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 25.0,
                     ),
                   ),
                   icon: Image(
                     image: AssetImage('assets/icono_recetas_01.png'),
-                    height: 100.0,
+                    height: 60.0,
                   ),
                 ),
               ),
 
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
 
               Card(
                 elevation: 10.0,
@@ -146,85 +159,28 @@ class _HomeState extends State<Home> {
                   label: Text(
                     'Lista de compras',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 25.0,
                     ),
                   ),
                   icon: Image(
                     image: AssetImage('assets/icono_changuito.png'),
-                    height: 100.0,
+                    height: 60.0,
                   ),
                 ),
               ),
 
-              /*  // Grilla de botones primera opcion
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: <Widget>[
-                  Card(
-                    elevation: 10.0,
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/icono_recetas_00.png'),
-                          height: 150.0,
-                        ),
-                        Text('Ver recetas'),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    elevation: 10.0,
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/icono_plan.png'),
-                          height: 150.0,
-                        ),
-                        Text('Mi plan semanal'),
-                      ],
-                    ),
-                  ),
-                ],
+              SizedBox(height: 20.0),
+
+              Text(
+                'Organizá tus viandas de toda las semana en segundos!',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight(500),
+                  //color: Colors.white,
+                ),
               ),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: <Widget>[
-                  Card(
-                    elevation: 10.0,
-                    child: Column(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/icono_recetas_01.png'),
-                          height: 150.0,
-                        ),
-                        Text('Mis recetas'),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    elevation: 10.0,
-                    child: Column(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/lista'); 
-                          },
-                          icon: Image(
-                            image: AssetImage('assets/icono_changuito.png'),
-                            height: 150,
-                          ),
-                        ),
-                        
-                        Text('Lista de compras'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              */
 
             ],
           ),
