@@ -8,6 +8,21 @@ class Recetas extends StatefulWidget {
 
 class _RecetasState extends State<Recetas> {
 
+  // Imagen - Titutlo - Duracion
+  List recetaList = [
+    [
+      "Milanesas con pure",
+      "20-25min",
+      "https://cuk-it.com/wp-content/uploads/2024/07/milanesas-pure-ig-1-819x1024.webp"
+    ],
+    [
+      "Milanesas con papas fritas",
+      "30-35min",
+      "https://img.freepik.com/foto-gratis/capa-plana-pescado-papas-fritas-tabla-cortar_23-2148776041.jpg?semt=ais_hybrid&w=740&q=80",
+    ],
+  ];
+
+
   @override
   void initState() {
     super.initState();
@@ -30,18 +45,23 @@ class _RecetasState extends State<Recetas> {
           color: Colors.white,
         ),
       ),
-      body: ListView(
-        children: [
-          RecetaPrewiew(Titulo: "Milanesas con pure", Duracion: "40-45min", ImagenURL: "URL"),
-          RecetaPrewiew(Titulo: "Milanesas con papas fritas", Duracion: "20-25min", ImagenURL: "URL2"),
-        ],
+      
+      body: ListView.builder(
+        itemCount: recetaList.length,
+        itemBuilder: (context, index) {
+          return RecetaPrewiew(
+            Titulo: recetaList[index][0], 
+            Duracion: recetaList[index][1], 
+            ImagenURL: recetaList[index][2],
+          );
+        }
       ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.green,
         child: Icon(
-          Icons.add,
+          Icons.search,
           color: Colors.white,
         ),
       ),

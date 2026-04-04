@@ -29,7 +29,10 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
-2026-03-29  - misviandas_app_v01
+2026-04-04 - misviandas_app_v01
+: Agregue el listado de ingredientes en la lista de compras. Y tambien agregue dos recetas en la pantalla de recetas.
+
+2026-03-29 - misviandas_app_v01
 : Actulice la app. Varias modificaciones, pero me da fiaca listarlas a todas ahora aca :(
 
 2026-03-21 - misviandas_app_v01

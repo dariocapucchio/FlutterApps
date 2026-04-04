@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misviandas_app_v01/util/item.dart';
 
 class Lista extends StatefulWidget {
   @override
@@ -6,6 +7,19 @@ class Lista extends StatefulWidget {
 }
 
 class _ListaState extends State<Lista> {
+
+  List items = [
+    ["Arroz", false],
+    ["Pechugas de pollo", false],
+    ["Pan rallado", false],
+    ["Papas", false],
+  ];
+
+  void checkBoxChange(bool? value, int index) {
+    setState(() {
+      items[index][1] = !items[index][1];
+    });
+  }
 
   @override
   void initState() {
@@ -30,9 +44,20 @@ class _ListaState extends State<Lista> {
         ),
       ),
       
-      body: Center(
-        child: 
-        Text('lista de compras'),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ItemLista(
+            item: items[index][0],
+            estado: items[index][1], 
+            onChanged: (value) => checkBoxChange(value, index),
+            Borrar: () {
+              setState(() {
+                items.remove(items[index]);
+              });
+            },
+          );
+        },
       ),
 
       floatingActionButton: FloatingActionButton(
