@@ -28,6 +28,8 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 ---
 
 ## LOG
+2026-04-15 - belladona_app_v01
+: Agregue la app de la tienda de belladona. Le falta la parte del carrito porque se me rompio :(.
 
 2026-04-04 - misviandas_app_v01
 : Agregue el listado de ingredientes en la lista de compras. Y tambien agregue dos recetas en la pantalla de recetas.
