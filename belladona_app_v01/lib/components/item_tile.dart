@@ -4,7 +4,8 @@ import '../modelos/item.dart';
 // ignore: must_be_immutable
 class ItemTile extends StatelessWidget {
   Item item;
-  ItemTile({super.key, required this.item});
+  void Function()? onTap;
+  ItemTile({super.key, required this.item, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -59,19 +60,22 @@ class ItemTile extends StatelessWidget {
                   ],
                 ),
                 
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(
-                      bottomRight: Radius.circular(12),
-                      topLeft: Radius.circular(12),
+                GestureDetector(
+                  onTap: onTap,
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
+                        bottomRight: Radius.circular(12),
+                        topLeft: Radius.circular(12),
+                      ),
+                      color: Colors.pink[200]
                     ),
-                    color: Colors.pink[200]
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    )
                   ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  )
                 ),
               ],
             ),

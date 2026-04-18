@@ -1,6 +1,7 @@
 import 'package:belladona_app_v01/modelos/item.dart';
+import 'package:flutter/material.dart';
 
-class Cart {
+class Cart extends ChangeNotifier {
   // Listado de items a la venta
   List<Item> itemShop = [
     Item(
@@ -12,14 +13,14 @@ class Cart {
     Item(
       'Pulsera Forcet',
       '\$42.500',
-      'assets/PulserForcet.png',
+      'assets/PulseraForcet.png',
       'Pulsera forcet de acero quirúrgico con dije circular grabado personalizado.'
     ),
     Item(
-      'Abridores Mariposas',
-      '\$9.800',
-      'assets/AbridoresMarioposa.png',
-      'Aros abridores de acero quirúrgico con baño ionizado plata (acero blanco) con forma de mariposa con strass de micropave.'
+      'Pulsera Cuore',
+      '\$13.000',
+      'assets/pulsera_cuore.png',
+      'Pulsera de hilo negro regulable con dije con forma de corazón.'
     ),
     Item(
       'Collar Chapita Militar',
@@ -45,11 +46,13 @@ class Cart {
   // Agregar items al carrito
   void addItemToCart(Item item) {
     userCart.add(item);
+    notifyListeners();
   }
 
   // Borrar items del carrito
   void removeItemFromCart(Item item) {
     userCart.remove(item);
+    notifyListeners();
   }
 
 }
