@@ -11,6 +11,9 @@ Esto es una recopilacion de aplicaciones de prueba que voy haciendo a medida que
 - [Como ser un Ninja en Flutter :ninja:](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ)
 - [Info veloz de Flutter](https://www.youtube.com/watch?v=WOvj84xq_fc)
 
+Primera version de la base de datos en [Supabase](https://supabase.com/)
+
+
 ---
 
 ## IDE
@@ -22,12 +25,22 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 ## To Do
 
 - [ ] Probar las apps en android y en iOS.
-- [ ] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
+- [x] Hacer mokup de las pantallas de la app definitiva (o su primera version). Con IA? Seguro.
 - [ ] Analizar de donde se van a sacar las recetas.
+- [ ] Implementar la base de datos.
+- [ ] Relacionar la base con la UI con una API.
+- [ ] Hacer una version "lanzable" del la APP.
 
 ---
 
 ## LOG
+
+2026-04-18 - misviandas_app_v01
+: Comenzando con Supabase
+
+2026-04-18 - belladona_app_v01
+: Actualice la app con el carrito andando. Se pueden agregar items al carrito, y cambien quitarlos del carrito. Con esto llego hasta aca.
+
 2026-04-15 - belladona_app_v01
 : Agregue la app de la tienda de belladona. Le falta la parte del carrito porque se me rompio :(.
 
