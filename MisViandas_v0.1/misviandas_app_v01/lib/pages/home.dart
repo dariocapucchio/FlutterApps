@@ -176,7 +176,7 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                   fontSize: 20.0,
                   letterSpacing: 2.0,
-                  fontWeight: FontWeight(500),
+                  //fontWeight: FontWeight(500),
                   //color: Colors.white,
                 ),
               ),

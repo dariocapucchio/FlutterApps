@@ -35,6 +35,9 @@ Todos los proyectos de este repositorio fueron hechos en VS code con la extensio
 
 ## LOG
 
+2026-06-25 - misviandas_app_v01
+: Generando carpeta /docs con documentacion para darle el contexto a codex
+
 2026-04-18 - misviandas_app_v01
 : Comenzando con Supabase
 
